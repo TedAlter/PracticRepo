@@ -1,0 +1,27 @@
+<html>
+<head>
+</head>
+<body>
+<form name="search">
+    <input type="text" name="key"></input>
+    <input type="submit" name="send" value="Відправити" />
+</form>
+<script>
+function sendForm(e){
+     
+    // отримуємо значення поля key
+    var keyBox = document.search.key;
+    var val = keyBox.value;
+    if(val.length>5){
+        alert("Неприпустима довжина рядка");
+        e.preventDefault();
+    }   
+    else
+        alert("Відправка дозволена");
+}
+ 
+var sendButton = document.search.send;
+sendButton.addEventListener("click", sendForm);
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<html>
+<head>
+</head>
+<body>
+<form name="search">
+    <input type="text" name="key" placeholder="Введіть ключ"></input>
+    <input type="button" name="print" value="Друк" />
+</form>
+<div id="printBlock"></div>
+<script>
+function printForm(e){
+     
+    // отримуємо значення поля key
+    var keyBox = document.search.key;
+    var val = keyBox.value;
+    // отримуємо елемент printBlock
+    var printBlock = document.getElementById("printBlock");
+    // створюємо новий параграф
+    var pElement = document.createElement("p");
+    // вставляємо у него текст
+    pElement.textContent = val;
+    // додаємо параграф в printBlock
+    printBlock.appendChild(pElement);
+}
+var printButton = document.search.print;
+printButton.addEventListener("click", printForm);
+</script>
+</body>
+</html>
