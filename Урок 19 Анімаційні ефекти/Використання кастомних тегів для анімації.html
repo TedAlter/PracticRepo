@@ -1,0 +1,68 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>Блокова верстка в три колонки</title>
+<style type = "text/css">
+div {
+border: 4px double black;
+background: yellow;
+padding: 10px;
+width: 200px;
+height: 30px;
+}
+div:hover {
+width: 300px;
+transition: 2s;
+font-size:xx-large;
+}
+</style>
+
+<style type = "text/css">
+alt {
+width: 400px;
+height: 50px;
+background-color: red;
+-webkit-animation-name: example;
+-webkit-animation-duration: 4s;
+animation-name: example;
+animation-duration: 4s;
+animation-iteration-count: infinite;
+}
+@keyframes example {
+0% {background-color: red;}
+25% {background-color: yellow;}
+40% {width: 4000px;}
+50% {background-color: blue; width: 4000px;}
+100% {background-color: green; width: 4000px;}
+}
+</style>
+
+<style type = "text/css">
+sct {animation: examplesct 2s linear 2s infinite alternate;}
+@keyframes examplesct {
+0% {background-color: red;}
+25% {background-color: yellow;}
+40% {font-size:xx-large;}
+50% {background-color: blue; font-size:xx-large;}
+100% {background-color: green; width: 4000px;}
+}
+</style>
+
+<style type = "text/css">
+scto {animation: examplesct 8s linear 5s infinite alternate;}
+</style>
+
+</head>
+<body>
+<div>Я люблю Україну</div>
+
+<br>Приклад циклічної анімації<br>
+<alt>інший кастомний формат</alt>
+
+<br>Праця тега із іншим синтаксисом об'явлення<br>
+<sct>приклад</sct>
+
+<br>Для кількох тегів може використовуватись один й той самий набір ключових кадрів<br>
+<scto>приклад</scto>
+</body>
+</html>
